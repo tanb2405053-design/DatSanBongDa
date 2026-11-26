@@ -137,7 +137,6 @@ function openAuthModal(tab = 'login') {
 
 function handleLoginSuccess(matchedUser) {
   currentUserMaKH.value = matchedUser.MaKH;
-  bookingTabRef.value?.setScope('mine');
   saveStateToStorage();
   authModal.isOpen = false;
   showToast(`Chào mừng ${matchedUser.TenKH} quay trở lại!`);
@@ -155,7 +154,6 @@ function handleRegisterSuccess(newUserData) {
 
   khachHangList.value.push(newCustomer);
   currentUserMaKH.value = newCustomer.MaKH;
-  bookingTabRef.value?.setScope('mine');
   saveStateToStorage();
 
   authModal.isOpen = false;

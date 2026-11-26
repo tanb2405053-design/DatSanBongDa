@@ -166,7 +166,7 @@ function handleRegisterSubmit() {
         <form v-if="currentTab.value === 'login'" @submit.prevent="handleLoginSubmit" class="p-6 space-y-4">
           <div>
             <label for="login-identifier" class="block text-xs font-semibold text-slate-700 mb-1">
-              Số điện thoại (SDT) hoặc Email <span class="text-rose-500">*</span>
+              Số điện thoại hoặc Email <span class="text-rose-500">*</span>
             </label>
             <div class="relative">
               <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400">
@@ -185,7 +185,7 @@ function handleRegisterSubmit() {
 
           <div>
             <label for="login-password" class="block text-xs font-semibold text-slate-700 mb-1">
-              Mật khẩu (MatKhau) <span class="text-rose-500">*</span>
+              Mật khẩu <span class="text-rose-500">*</span>
             </label>
             <div class="relative">
               <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400">
@@ -227,7 +227,7 @@ function handleRegisterSubmit() {
         <form v-else @submit.prevent="handleRegisterSubmit" class="p-6 space-y-3.5 max-h-[75vh] overflow-y-auto">
           <div>
             <label for="reg-name" class="block text-xs font-semibold text-slate-700 mb-1">
-              Họ và tên (TenKH) <span class="text-rose-500">*</span>
+              Họ và tên <span class="text-rose-500">*</span>
             </label>
             <input
               type="text"
@@ -242,7 +242,7 @@ function handleRegisterSubmit() {
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label for="reg-phone" class="block text-xs font-semibold text-slate-700 mb-1">
-                Số điện thoại (SDT) <span class="text-rose-500">*</span>
+                Số điện thoại <span class="text-rose-500">*</span>
               </label>
               <input
                 type="tel"
@@ -270,7 +270,7 @@ function handleRegisterSubmit() {
 
           <div>
             <label for="reg-address" class="block text-xs font-semibold text-slate-700 mb-1">
-              Địa chỉ (DiaChi) <span class="text-rose-500">*</span>
+              Địa chỉ <span class="text-rose-500">*</span>
             </label>
             <input
               type="text"
@@ -285,7 +285,7 @@ function handleRegisterSubmit() {
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label for="reg-password" class="block text-xs font-semibold text-slate-700 mb-1">
-                Mật khẩu (MatKhau) <span class="text-rose-500">*</span>
+                Mật khẩu <span class="text-rose-500">*</span>
               </label>
               <input
                 type="password"

@@ -24,7 +24,7 @@ const emit = defineEmits(['close', 'view-bookings', 'pay-now']);
 
         <div class="p-6 space-y-4 text-sm">
           <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200 flex items-center justify-between">
-            <span class="text-xs text-slate-500">Mã phiếu đặt (MaPhieu):</span>
+            <span class="text-xs text-slate-500">Mã phiếu đặt:</span>
             <span class="font-mono font-extrabold text-base text-emerald-700">{{ data.phieu.MaPhieu }}</span>
           </div>
           <div class="space-y-2 text-xs">

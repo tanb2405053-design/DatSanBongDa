@@ -183,11 +183,11 @@ function handleSubmit() {
                 </p>
               </div>
               <div>
-                <p class="text-slate-500 text-xs">Ngày sử dụng (Ngay)</p>
+                <p class="text-slate-500 text-xs">Ngày sử dụng</p>
                 <p class="font-bold text-slate-900 mt-0.5">{{ formatDateVN(ngaySuDung) }}</p>
               </div>
               <div>
-                <label for="modal-slot-select" class="block text-slate-500 text-xs mb-1">Khung giờ thuê (KhungGioBD - KT)</label>
+                <label for="modal-slot-select" class="block text-slate-500 text-xs mb-1">Khung giờ thuê</label>
                 <select
                   id="modal-slot-select"
                   v-model="form.selectedSlot"
@@ -265,7 +265,7 @@ function handleSubmit() {
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label for="cust-phone" class="block text-xs font-semibold text-slate-700 mb-1">
-                  Số điện thoại (SDT) <span class="text-rose-500">*</span>
+                  Số điện thoại <span class="text-rose-500">*</span>
                 </label>
                 <div class="flex gap-2">
                   <input
@@ -291,7 +291,7 @@ function handleSubmit() {
 
               <div>
                 <label for="cust-name" class="block text-xs font-semibold text-slate-700 mb-1">
-                  Họ và tên khách hàng (TenKH) <span class="text-rose-500">*</span>
+                  Họ và tên khách hàng <span class="text-rose-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -320,7 +320,7 @@ function handleSubmit() {
 
               <div>
                 <label for="cust-address" class="block text-xs font-semibold text-slate-700 mb-1">
-                  Địa chỉ (DiaChi) <span class="text-rose-500">*</span>
+                  Địa chỉ <span class="text-rose-500">*</span>
                 </label>
                 <input
                   type="text"
@@ -336,7 +336,7 @@ function handleSubmit() {
 
             <div>
               <label for="booking-note" class="block text-xs font-semibold text-slate-700 mb-1">
-                Ghi chú đặt sân (GhiChu)
+                Ghi chú đặt sân 
               </label>
               <textarea
                 id="booking-note"
