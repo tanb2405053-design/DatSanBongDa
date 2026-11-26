@@ -47,8 +47,11 @@ const emit = defineEmits(['update:activeTab', 'open-auth', 'logout']);
             class="flex-1 sm:flex-initial flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-all"
           >
             <i class="fa-solid fa-receipt"></i>
-            <span>{{ currentUser ? 'Phiếu đặt của tôi' : 'Phiếu đã đặt' }}</span>
-            <span class="ml-0.5 px-2 py-0.5 text-xs rounded-full bg-emerald-100 text-emerald-700 font-bold">
+            <span>{{ currentUser ? 'Phiếu đặt của tôi' : 'Tra cứu phiếu đặt' }}</span>
+            <span
+              v-if="currentUser"
+              class="ml-0.5 px-2 py-0.5 text-xs rounded-full bg-emerald-100 text-emerald-700 font-bold"
+            >
               {{ activeBookingCount }}
             </span>
           </button>

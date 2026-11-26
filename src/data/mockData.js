@@ -1,8 +1,8 @@
 export const STORAGE_KEYS = {
-  KHACH_HANG: 'sportbook_khach_hang_v1',
-  PHIEU_DAT_SAN: 'sportbook_phieu_dat_san_v1',
-  CHI_TIET_DAT_SAN: 'sportbook_chi_tiet_dat_san_v1',
-  CURRENT_USER: 'sportbook_current_user_v1'
+  KHACH_HANG: 'sportbook_khach_hang_v2',
+  PHIEU_DAT_SAN: 'sportbook_phieu_dat_san_v2',
+  CHI_TIET_DAT_SAN: 'sportbook_chi_tiet_dat_san_v2',
+  CURRENT_USER: 'sportbook_current_user_v2'
 };
 
 export function getTodayStr() {
@@ -17,14 +17,14 @@ export const TODAY_STR = getTodayStr();
 export const LOAI_SAN = [
   { MaLoai: 'LS01', TenLoai: 'Sân bóng đá 5 người', MoTa: 'Mặt cỏ nhân tạo tiêu chuẩn FIFA, có hệ thống đèn LED chống chói.' },
   { MaLoai: 'LS02', TenLoai: 'Sân bóng đá 7 người', MoTa: 'Sân cỏ nhân tạo kích thước lớn, phù hợp thi đấu giao hữu phong trào.' },
-  { MaLoai: 'LS03', TenLoai: 'Sân bóng đá 11 người', MoTa: 'Sân tiêu chuẩn thi đấu giải chuyên nghiệp, khán đài và phòng thay đồ.' },
+  { MaLoai: 'LS03', TenLoai: 'Sân bóng đá 11 người', MoTa: 'Sân tiêu chuẩn thi đấu giải chuyên nghiệp, khán đài và phòng thay đồ.' }
 ];
 
 export const SAN = [
   { MaSan: 'S01', TenSan: 'Sân Bóng Đá 5 - A1', ChieuDai: 40, ChieuRong: 20, MaLoai: 'LS01', TrangThai: 'Hoạt động' },
   { MaSan: 'S02', TenSan: 'Sân Bóng Đá 5 - A2', ChieuDai: 40, ChieuRong: 20, MaLoai: 'LS01', TrangThai: 'Hoạt động' },
   { MaSan: 'S03', TenSan: 'Sân Bóng Đá 7 - B1', ChieuDai: 55, ChieuRong: 35, MaLoai: 'LS02', TrangThai: 'Hoạt động' },
-  { MaSan: 'S04', TenSan: 'Sân Bóng Đá 11 - C1', ChieuDai: 105, ChieuRong: 68, MaLoai: 'LS03', TrangThai: 'Hoạt động' },
+  { MaSan: 'S04', TenSan: 'Sân Bóng Đá 11 - C1', ChieuDai: 105, ChieuRong: 68, MaLoai: 'LS03', TrangThai: 'Hoạt động' }
 ];
 
 export const TIME_SLOTS = [
@@ -59,12 +59,12 @@ export const DEFAULT_PHIEU_DAT_SAN = [
     MaPhieu: 'PD2026002',
     MaKH: 'KH002',
     NgayDat: `${TODAY_STR} 08:05`,
-    TongTien: 234000,
-    TienCoc: 70200,
+    TongTien: 520000,
+    TienCoc: 156000,
     DaThanhToan: 0,
     PhuongThucTT: '',
     NgayThanhToan: '',
-    GhiChu: 'Thuê thêm 2 vợt cầu lông tại quầy.',
+    GhiChu: 'Thuê thêm 1 bóng thi đấu và 10 áo bib tại quầy.',
     TrangThai: 'Chờ thanh toán'
   }
 ];
@@ -84,12 +84,12 @@ export const DEFAULT_CHI_TIET_DAT_SAN = [
   {
     STT_PD: 2,
     MaPhieu: 'PD2026002',
-    MaSan: 'S05',
+    MaSan: 'S02',
     NgaySuDung: TODAY_STR,
     NgayGioNhanDK: `${TODAY_STR} 20:00`,
     NgayGioTraDK: `${TODAY_STR} 22:00`,
     KhungGioBD: '20:00',
     KhungGioKT: '22:00',
-    GiaLucDat: 234000
+    GiaLucDat: 520000
   }
 ];

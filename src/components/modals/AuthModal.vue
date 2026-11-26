@@ -127,7 +127,6 @@ function handleRegisterSubmit() {
       <div class="relative w-full max-w-md rounded-2xl bg-white shadow-2xl border border-slate-200 overflow-hidden animate-fade-in">
         <div class="bg-slate-900 px-6 py-4 text-white flex items-center justify-between">
           <div>
-            <span class="text-[11px] uppercase tracking-wider font-semibold text-emerald-400">Use Case: Đăng nhập &amp; Thành viên</span>
             <h3 class="text-lg font-bold flex items-center gap-2 mt-0.5">
               <i class="fa-solid fa-user-shield text-emerald-400"></i>
               <span>{{ currentTab.value === 'login' ? 'Đăng nhập tài khoản' : 'Đăng ký thành viên mới' }}</span>
@@ -165,28 +164,6 @@ function handleRegisterSubmit() {
 
         <!-- Form Đăng nhập -->
         <form v-if="currentTab.value === 'login'" @submit.prevent="handleLoginSubmit" class="p-6 space-y-4">
-          <div class="bg-emerald-50/80 border border-emerald-200 rounded-xl p-3 text-xs text-emerald-900 space-y-1.5">
-            <p class="font-bold flex items-center gap-1.5">
-              <i class="fa-solid fa-key text-emerald-600"></i> Tài khoản mẫu (Mật khẩu chung: <code class="bg-white px-1.5 py-0.5 rounded border border-emerald-200">123456</code>)
-            </p>
-            <div class="flex flex-wrap gap-1.5 pt-0.5">
-              <button
-                type="button"
-                @click="fillLoginDemo('0901234567')"
-                class="px-2 py-1 rounded bg-white border border-emerald-300 hover:bg-emerald-600 hover:text-white font-mono transition"
-              >
-                0901234567 (Nguyễn Văn An)
-              </button>
-              <button
-                type="button"
-                @click="fillLoginDemo('0912345678')"
-                class="px-2 py-1 rounded bg-white border border-emerald-300 hover:bg-emerald-600 hover:text-white font-mono transition"
-              >
-                0912345678 (Trần Thị Bích)
-              </button>
-            </div>
-          </div>
-
           <div>
             <label for="login-identifier" class="block text-xs font-semibold text-slate-700 mb-1">
               Số điện thoại (SDT) hoặc Email <span class="text-rose-500">*</span>

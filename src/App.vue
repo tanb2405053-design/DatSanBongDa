@@ -97,10 +97,10 @@ const currentUser = computed(() => {
 });
 
 const activeBookingCount = computed(() => {
-  if (currentUser.value) {
-    return phieuDatSanList.value.filter(p => p.MaKH === currentUser.value.MaKH && p.TrangThai !== 'Đã hủy').length;
-  }
-  return phieuDatSanList.value.filter(p => p.TrangThai !== 'Đã hủy').length;
+  if (!currentUser.value) return 0;
+  return phieuDatSanList.value.filter(
+    p => p.MaKH === currentUser.value.MaKH && p.TrangThai !== 'Đã hủy'
+  ).length;
 });
 
 function isSlotBooked(maSan, ngayStr, khungGioBD) {
@@ -267,6 +267,15 @@ function openPaymentModal(phieu) {
   paymentModal.isOpen = true;
 }
 
+function handleViewBookingsFromReceipt() {
+  const data = receiptModal.data;
+  receiptModal.isOpen = false;
+  activeTab.value = 'bookings';
+  if (!currentUser.value && data) {
+    bookingTabRef.value?.prefillAndLookup(data.phieu.MaPhieu, data.customer.SDT);
+  }
+}
+
 function handlePayNowFromReceipt(maPhieu) {
   receiptModal.isOpen = false;
   const targetPhieu = phieuDatSanList.value.find(p => p.MaPhieu === maPhieu);
@@ -351,6 +360,7 @@ onMounted(() => {
         @go-search="activeTab = 'search'"
         @open-payment="openPaymentModal"
         @prompt-cancel="promptCancelBooking"
+        @open-auth="openAuthModal"
       />
     </main>
 
@@ -382,7 +392,7 @@ onMounted(() => {
       :is-open="receiptModal.isOpen"
       :data="receiptModal.data"
       @close="receiptModal.isOpen = false"
-      @view-bookings="receiptModal.isOpen = false; activeTab = 'bookings';"
+      @view-bookings="handleViewBookingsFromReceipt"
       @pay-now="handlePayNowFromReceipt"
     />
 
